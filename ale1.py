@@ -3,16 +3,24 @@ def calculadora():
 #try es la funcion que nos ayudara a marcar el rango del codigo donde se colocaran las excepciones, para que la aplicion no se bloquee
     try:
         #se agrego \n para colocar calculadora de masa corporal en nueva linea 
-        print("Servicio Médico - \nCalculadora de Masa Corporal")
-        #se concatena hola mas la variable nombre con el resto de la oracion.
-        nombre = input("¿Cuál es tu nombre? ")
-        print("Hola " + nombre + ", Iniciemos.")
+        print("Servicio Médico  \nCalculadora de Masa Corporal")
+        
+        nombre = str(input("Ingresa tu nombre:  "))
+        apellido_paterno  = str(input("Ingresa tu apellido paterno:  "))
+        apellido_materno= str(input("ingresa tu apellido materno: "))
+        edad= input("Cual es tu edad:  ")
+        nombre_completo = nombre + " " + apellido_paterno + " " + apellido_materno
+        
+        #se concatena hola mas la variable nombre completo con el resto de la oracion.
+        print("Hola " + nombre_completo + ", Iniciemos.")
 # se coloca float antes del input para  que el volor que ingrese, se convierta en un numero flotante
         peso = float(input("Ingresa tu peso en kg: "))
-        print(nombre + ", Tu peso es " + str(peso) + " kg.")
+        print(nombre + ", Tu peso es  de " + str(peso) + " kg.")
 
         estatura = float(input("Para continuar, ingresa tu estatura en metros: "))
+
         imc = peso / estatura**2
+        
 
         # round redondea a dos caracteres el IMC para no presentar mas valores, despues del punto
 # se agrega str antes de IMC para cuando lo imprima lo coloque como un string
@@ -48,6 +56,7 @@ def calculadora():
         calculadora()  # Vuelve a intentar
 # (llama) reinicia la aplicacion 
 calculadora()
+print("\nGracias por usar la calculadora de IMC. ")
 print("\n\n\n\nProyecto 1 Alejandro Maldonado Ponce.")
 
 
